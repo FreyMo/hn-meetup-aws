@@ -1,0 +1,11 @@
+services:
+  meetup-webapi:
+    platform: linux/arm64
+    build:
+      context: src/Aws.Meetup.WebApi
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      AWS_REGION: eu-central-1
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_SESSION_TOKEN: ${AWS_SESSION_TOKEN}
